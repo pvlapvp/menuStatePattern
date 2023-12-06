@@ -13,7 +13,7 @@ public class RootState implements State {
                 Выберите пункт меню:
                 1. Координаты
                 2. Телефоны
-                3. Хуйня
+                3. Что-то там
                 x - выход
                 """);
         Scanner scanner = new Scanner(System.in);
