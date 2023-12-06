@@ -1,12 +1,11 @@
 import java.util.Map;
 
 public class Menu {
-    private RootState rootState;
-    private FirstState firstState;
-    private SecondState secondState;
-    private ThirdState thirdState;
-    private ExitState exitState;
-    private State prevState;
+    private final RootState rootState;
+    private final FirstState firstState;
+    private final SecondState secondState;
+    private final ThirdState thirdState;
+    private final ExitState exitState;
     private State currentState;
     private final Map<State, State> relationMap;
 
@@ -24,10 +23,8 @@ public class Menu {
     }
 
     private void setState(State state) {
-        prevState = currentState;
         currentState = state;
         currentState.print();
-        System.out.println(relationMap);
     }
     public void setFirstState() {
         setState(firstState);
@@ -45,16 +42,8 @@ public class Menu {
         setState(exitState);
     }
 
-    public void getBack() {
-        currentState = prevState;
-        currentState.print();
-    }
-
     public void setParentState() {
         setState(relationMap.get(currentState));
     }
 
-    public void setRootState() {
-        setState(rootState);
-    }
 }

@@ -12,6 +12,6 @@ public class FirstState implements State{
         System.out.println("welcome to the 1st state press any key to get back");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
-        menu.getBack();
+        menu.setParentState();
     }
 }
